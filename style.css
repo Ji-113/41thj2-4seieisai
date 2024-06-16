@@ -1,0 +1,97 @@
+  *{
+   margin:0;
+   padding:0;
+  }
+  html,body {
+     font-family: "Zen Old Mincho",Serif;
+	height:100%;
+	width:100%;
+  }
+
+  h1 {
+	font-size: 70px;
+	color: #073763;
+	font-family: "Hina Mincho",Serif;
+	font-weight: normal;
+	text-align: center;
+  }
+
+  .setumei {
+	text-align: center;
+  }
+
+  .nomal {
+     font-size:28px;
+	}
+
+  .big {
+     font-size:80px;
+	color:#073763;
+     }
+
+  .furigana {
+     font-size:18px;
+	color:#073763;
+	}
+
+  .member {
+	text-align:center;
+	font-size:25px;
+	}
+
+  #countdown {
+     font-family: "Hina Mincho";
+     text-align: center;
+     }
+
+  .q {
+     font-size:30px;
+     }
+
+  .all {
+     font-size:50px;
+     }
+
+  footer {
+	color:#ffffff;
+     background-color:#000000;
+	text-align:center;
+	margin: 0; padding: 0;
+     }
+
+  /* フッター */
+  footer {
+　  background-color: darkred;
+　  color: whitesmoke;
+    
+    li {
+     display: inline;
+	}
+
+    a {
+	text-decoration: none; 
+	color:#ffffff;
+    }
+    a:hover {
+	text-decoration: underline; 
+    }
+  }
+
+  .footer-menu {
+　  height: 60px;
+  }
+
+  .footer-menu-list {
+  　list-style: none;
+　  text-align: center;
+　  line-height: 60px;
+  }
+
+  .footer-menu-list li {
+　  margin: 10px;
+　  display: inline;
+  }
+
+  .copyright {
+　  text-align: center;
+  }

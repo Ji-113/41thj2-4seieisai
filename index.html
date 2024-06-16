@@ -63,7 +63,7 @@ const countdown = () => {
     const miliseconds = distance < 0 ? 0 : Math.floor( distance % 1000 );
  
     // カウントダウンタイマーのHTML更新
-    ele.innerHTML = `<span class="q">清榮祭まであと&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span><br /><span class="all">&emsp;<span class="days">${ days }</span>日と<span class="hours">${ String( hours ).padStart( 2, '0' ) }</span>時間<span class="minutes">${ String( minutes ).padStart( 2, '0' ) }</span>分<span class="seconds">${ String( seconds ).padStart( 2, '0' ) }</span>.${ String( miliseconds ).padStart( 3, '0' ) }秒</span>`;
+    ele.innerHTML = `<span class="q">清榮祭まであと&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span><br /><span class="all">&emsp;<span class="days">${ days }</span>日と<span class="hours">${ String( hours ).padStart( 2, '0' ) }</span>時間<span class="minutes">${ String( minutes ).padStart( 2, '0' ) }</span>分<span class="seconds">${ String( seconds ).padStart( 2, '0' ) }</span>.${ String( miliseconds ).padStart( 3, '0' ) }秒</span>`;
  
     // 再度タイマー更新の実行
     window.requestAnimationFrame( countdown );

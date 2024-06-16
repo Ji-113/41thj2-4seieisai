@@ -19,6 +19,15 @@
 </head>
 
 <body>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw.js').then(registration => {
+      console.log('ServiceWorker registration successful.');
+    }).catch(err => {
+      console.log('ServiceWorker registration failed.');
+    });
+  }
+</script>
 <br><br><h1>41thJ2-4 清榮祭</h1>
 <br><br><br>
 <p class="setumei"><span class="nomal">令和6年度清榮祭のテーマは</span><ruby><span class="big">刻</span><rt><span class="furigana">とき</span></rt></ruby><span class="nomal">です。</span><br><span class="nomal">みんなで最高の清榮祭を作り上げましょう!</span></p>

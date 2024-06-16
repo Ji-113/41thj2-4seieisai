@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho&display=swap" rel="stylesheet">
+  <title>41thJ2-4清榮祭特設ページ</title>
+</head>
+
+<body>
+<br><br><h1>41thJ2-4 清榮祭</h1>
+<br><br><br>
+<p class="setumei"><span class="nomal">令和6年度清榮祭のテーマは</span><ruby><span class="big">刻</span><rt><span class="furigana">とき</span></rt></ruby><span class="nomal">です。</span><br><span class="nomal">みんなで最高の清榮祭を作り上げましょう!</span></p>
+<br><br>
+
+<p class="member">
+	チーフ：未定<br>副チーフ：未定
+</p>
+<br><br>
+<div id="countdown"></div>
+<script>
+// 目標日時を指定（年, 月（0-11）, 日, 時, 分, 秒）
+const targetDate = new Date( 2024, 8, 6, 9, 0, 0 );
+ 
+// カウントダウンタイマー
+const ele = document.getElementById( 'countdown' );
+ 
+// カウントダウン処理
+const countdown = () => {
+  // 現在日時
+  const now = new Date();
+  // 時差
+  const distance = targetDate - now;
+ 
+  if ( distance < 0 ) {
+    ele.innerHTML = "カウントダウン終了！";
+ 
+  } else {
+    const days = Math.floor( distance / ( 1000 * 60 * 60 * 24 ) );
+    const hours = Math.floor( ( distance % ( 1000 * 60 * 60 * 24 ) ) / ( 1000 * 60 * 60 ) );
+    const minutes = Math.floor( ( distance % ( 1000 * 60 * 60 ) ) / ( 1000 * 60 ) );
+    const seconds = Math.floor( ( distance % ( 1000 * 60 ) ) / 1000 );
+    const miliseconds = distance < 0 ? 0 : Math.floor( distance % 1000 );
+ 
+    // カウントダウンタイマーのHTML更新
+    ele.innerHTML = `<span class="q">清榮祭まであと&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span><br /><span class="all">&emsp;<span class="days">${ days }</span>日と<span class="hours">${ String( hours ).padStart( 2, '0' ) }</span>時間<span class="minutes">${ String( minutes ).padStart( 2, '0' ) }</span>分<span class="seconds">${ String( seconds ).padStart( 2, '0' ) }</span>.${ String( miliseconds ).padStart( 3, '0' ) }秒</span>`;
+ 
+    // 再度タイマー更新の実行
+    window.requestAnimationFrame( countdown );
+  }
+}
+ 
+// カウントダウンタイマーの起動
+window.requestAnimationFrame( countdown );
+</script>
+<br><br>
+
+<footer>
+  <div class="footer-menu">
+　　<ul class="footer-menu-list">
+　　　<li><a href="https://sites.google.com/edu.nishiyamato.ed.jp/41thj2-4seieisai/home">>HOME</a></li>
+　　　<li><a href="https://sites.google.com/edu.nishiyamato.ed.jp/41thj2-4seieisai/class-exhibition">>クラス展示について</a></li>
+　　　<li><a href="https://sites.google.com/edu.nishiyamato.ed.jp/41thj2-4seieisai/important-message">>重要連絡</a></li>
+　　　<li><a href="https://sites.google.com/search/edu.nishiyamato.ed.jp/41thj2-4seieisai/">>サイト内検索</a></li>
+　　　<li><a href="https://sites.google.com/edu.nishiyamato.ed.jp/41thj2-4/">>クラスサイト</a></li>
+　　</ul>
+　</div>
+  <div class="copyright">
+    <p>© 2024 J2-4executives All rights reserved.</p><br>
+  </div>
+</footer>
+</body>
+
+
+<style>
+  *{
+   margin:0;
+   padding:0;
+  }
+  html,body {
+     font-family: "Zen Old Mincho",Serif;
+	height:100%;
+	width:100%;
+  }
+
+  h1 {
+	font-size: 70px;
+	color: #073763;
+	font-family: "Hina Mincho",Serif;
+	font-weight: normal;
+	text-align: center;
+  }
+
+  .setumei {
+	text-align: center;
+  }
+
+  .nomal {
+     font-size:28px;
+	}
+
+  .big {
+     font-size:80px;
+	color:#073763;
+     }
+
+  .furigana {
+     font-size:18px;
+	color:#073763;
+	}
+
+  .member {
+	text-align:center;
+	font-size:25px;
+	}
+
+  #countdown {
+     font-family: "Hina Mincho";
+     text-align: center;
+     }
+
+  .q {
+     font-size:30px;
+     }
+
+  .all {
+     font-size:50px;
+     }
+
+  footer {
+	color:#ffffff;
+     background-color:#000000;
+	text-align:center;
+	margin: 0; padding: 0;
+     }
+
+  /* フッター */
+  footer {
+　  background-color: darkred;
+　  color: whitesmoke;
+    
+    li {
+     display: inline;
+	}
+
+    a {
+	text-decoration: none; 
+	color:#ffffff;
+    }
+    a:hover {
+	text-decoration: underline; 
+    }
+  }
+
+  .footer-menu {
+　  height: 60px;
+  }
+
+  .footer-menu-list {
+  　list-style: none;
+　  text-align: center;
+　  line-height: 60px;
+  }
+
+  .footer-menu-list li {
+　  margin: 10px;
+　  display: inline;
+  }
+
+  .copyright {
+　  text-align: center;
+  }
+</style>
+</html>
